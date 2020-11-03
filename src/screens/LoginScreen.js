@@ -1,16 +1,20 @@
 /* eslint-disable prettier/prettier */
-import React,{useState} from 'react';
-import {View, StyleSheet, Text,ImageBackground} from 'react-native';
-import {AuthBottomOptions, AuthForm} from '../components';
-const LoginScreen = () => {
+import React from 'react';
+import {View,ImageBackground,Image} from 'react-native';
+import {AuthBottomOptions, AuthForm} from '../core/components/AuthComponents';
+import {AuthScreenStyles as styles} from './styles';
+import {LoginStrings as strings} from './static';
+const LoginScreen = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-            <ImageBackground style={{flex:1}} source={require('../resources/AuthBackground.png')}>
-            <View style={styles.topHeader}><ImageBackground style={{width:200,height:130}} source={require('../resources/WelcomeIcon.png')}/></View>
+            <ImageBackground style={{flex:1}} source={require('../core/resources/AuthBackground.png')}>
+            <View style={styles.topHeader}>
+              <Image style={styles.welcomeIcon} source={require('../core/resources/WelcomeIcon.png')}/>
+            </View>
             <View style={styles.formStyle}>
-                <AuthForm headerText="Login" submitText="Login"/>
-                <AuthBottomOptions/>
+                <AuthForm headerText={strings.headerText} submitText={strings.headerText} onSubmitCallback={()=>navigation.navigate('HomeScreen')}/>
+                <AuthBottomOptions option1Text={strings.option1Text} option2Text={strings.option2Text}/>
             </View>
         </ImageBackground>
     </View>
@@ -18,22 +22,5 @@ const LoginScreen = () => {
 };
 
 
-const styles = StyleSheet.create({
-
-    container:{
-        flex:1,
-    },
-    topHeader:{
-        flex:1,
-        alignItems:'center',
-        justifyContent:'center',
-    },
-    formStyle:{
-        flex:3,
-        alignItems:'center',
-        justifyContent:'center',
-    },
-
-});
 
 export default LoginScreen;

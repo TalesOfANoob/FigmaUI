@@ -1,0 +1,35 @@
+/* eslint-disable prettier/prettier */
+import React from 'react';
+import {Image} from 'react-native';
+import {Input} from 'react-native-elements';
+import {HomeSearchStyles as styles} from './styles';
+import {SearchStrings as strings} from './static';
+
+const HomeSearchBar = () => {
+
+    return (
+            <Input
+            containerStyle={styles.container}
+            inputContainerStyle={styles.inputContainer}
+            inputStyle={styles.inputStyle}
+            rightIcon={
+                <Image
+
+                    source={require('../../../core/resources/Filter.png')}
+                />
+            }
+            leftIcon={
+                <Image
+                    source={require('../../../core/resources/Search.png')}
+                />
+            }
+
+
+            placeholder={strings.placeholder}
+            placeholderTextColor="rgba(19, 73, 123, 0.6)"
+            />
+
+    );
+};
+
+export default HomeSearchBar;
