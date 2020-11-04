@@ -3,10 +3,8 @@ import {StyleSheet} from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 export default StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor:'#f0f6ff',
-    padding:RFValue(20),
-    paddingBottom:0,
-  },
+
+    list:{
+        marginTop:RFValue(20),
+    },
 });

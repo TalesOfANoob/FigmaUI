@@ -1,13 +1,15 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {View,ImageBackground,Image} from 'react-native';
+import {View,ScrollView,ImageBackground,Image} from 'react-native';
 import {AuthBottomOptions, AuthForm} from '../core/components/AuthComponents';
 import {AuthScreenStyles as styles} from './styles';
 import {LoginStrings as strings} from './static';
 const LoginScreen = ({navigation}) => {
 
   return (
-    <View style={styles.container}>
+
+    <ScrollView style={styles.scroll}>
+      <View style={styles.container}>
             <ImageBackground style={{flex:1}} source={require('../core/resources/AuthBackground.png')}>
             <View style={styles.topHeader}>
               <Image style={styles.welcomeIcon} source={require('../core/resources/WelcomeIcon.png')}/>
@@ -17,7 +19,8 @@ const LoginScreen = ({navigation}) => {
                 <AuthBottomOptions option1Text={strings.option1Text} option2Text={strings.option2Text}/>
             </View>
         </ImageBackground>
-    </View>
+        </View>
+    </ScrollView>
   );
 };
 
