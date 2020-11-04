@@ -2,7 +2,7 @@
 import React from 'react';
 import {FlatList} from 'react-native';
 import {LocationItem} from './LocationListComponents';
-import {LocationListStyles as styles} from './styles'
+import {LocationListStyles as styles} from './styles';
 const LocationList = () => {
 
 
@@ -34,7 +34,7 @@ const LocationList = () => {
         <FlatList
             style={styles.list}
             data={data}
-            keyExtractor={(item,index)=>'' + index}
+            keyExtractor={(item,index)=>index}
             renderItem={({item})=>{
                 return (<LocationItem
                     img={item.img}

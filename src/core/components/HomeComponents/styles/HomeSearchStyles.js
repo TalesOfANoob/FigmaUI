@@ -25,6 +25,14 @@ export default StyleSheet.create({
     },
     inputStyle:{
         paddingLeft:RFValue(10),
+        fontSize:RFValue(16),
+    },
+    leftIcon:{
+        width:RFValue(20),
+        height:RFValue(20),
+    },
+    rightIcon:{
+        width:RFValue(22),
+        height:RFValue(20),
     }
-
 });

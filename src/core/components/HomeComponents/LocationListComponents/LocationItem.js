@@ -13,7 +13,7 @@ const LocationItem = ({img,name,price,owner,stars,reviews,specs,location}) =>{
                 style={styles.backgroundStyle}
             >
             <Text style={styles.locationText}><Ionicons style={styles.locIcon} name="location-outline"/>{location}</Text>
-            <ItemBottomBar name={name} price={price} owner={owner} stars={stars} reviews={reviews} specs={specs}/>
+            <ItemBottomBar key={name+owner+price} name={name} price={price} owner={owner} stars={stars} reviews={reviews} specs={specs}/>
             </ImageBackground>
         </View>
     );

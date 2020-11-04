@@ -14,12 +14,13 @@ const HomeSearchBar = () => {
             inputStyle={styles.inputStyle}
             rightIcon={
                 <Image
-
+                    style={styles.rightIcon}
                     source={require('../../../core/resources/Filter.png')}
                 />
             }
             leftIcon={
                 <Image
+                    style={styles.leftIcon}
                     source={require('../../../core/resources/Search.png')}
                 />
             }
