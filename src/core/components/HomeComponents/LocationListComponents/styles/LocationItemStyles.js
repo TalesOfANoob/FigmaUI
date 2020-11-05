@@ -27,6 +27,42 @@ export default StyleSheet.create({
     backgroundStyle:{
         flex:1,
     },
+    favIconContainer:{
+        alignItems:'center',
+        justifyContent:'center',
+        width:RFValue(35),
+        height:RFValue(35),
+        borderRadius:RFValue(17.5),
+        position:'absolute',
+        right:RFValue(35),
+        bottom:RFValue(85),
+        zIndex:1,
+        backgroundColor:'#FFFFFF',
+        shadowColor: 'rgba(45, 87, 137, 0.25)',
+        shadowOffset: {
+            width: 0,
+            height: 0,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+
+        elevation: 5,
+
+
+    },
+    favIcon:{
+        textAlign:'center',
+        textAlignVertical:'center',
+        fontSize:RFValue(20),
+    },
+    favIconEnabled:{
+        color:'#EB5A7C',
+        
+    },
+    favIconDisabled:{
+        color:'#8A9BAB',
+        
+    },
     locIcon:{
         fontSize:RFValue(15),
     },

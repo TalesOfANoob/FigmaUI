@@ -2,6 +2,7 @@
 import React from 'react';
 import {View,Text,Image} from 'react-native';
 import {ItemBottomBarStyles as styles} from './styles';
+
 import{
 
     BlueStar,
@@ -54,9 +55,11 @@ const ItemBottomBar = ({name,owner,stars,reviews,price,specs})=>{
             </View>
 
             <View style={styles.leftSection} >
+
                 <Text style={styles.price}>
                     {`$${price} USD`}
                 </Text>
+
                 <View style={styles.specsContainer}>
                     <View style={styles.specContainer}>
                         <Image style={styles.specIcon} source={Dorm}/>
