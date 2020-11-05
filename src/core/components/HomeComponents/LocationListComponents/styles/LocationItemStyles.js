@@ -34,7 +34,7 @@ export default StyleSheet.create({
         height:RFValue(35),
         borderRadius:RFValue(17.5),
         position:'absolute',
-        right:RFValue(35),
+        right:RFValue(38),
         bottom:RFValue(85),
         zIndex:1,
         backgroundColor:'#FFFFFF',

@@ -68,7 +68,7 @@ export default StyleSheet.create({
     },
     specContainer:{
         flexDirection:'row',
-        marginRight:RFValue(16),
+        marginRight:RFValue(10),
     },
     spec:{
         fontSize:RFValue(13),
