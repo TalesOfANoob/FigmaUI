@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 export default StyleSheet.create({
     topBar:{
-        marginTop:RFValue(5),
+        marginTop:5,
         flexDirection:'row',
         alignItems:'center',
         justifyContent:'center',
@@ -11,7 +11,7 @@ export default StyleSheet.create({
     icon: {
     fontSize:RFValue(19),
     color:'#143656',
-    marginHorizontal:RFValue(7),
+    marginHorizontal:7,
 },
   location:{
     flexDirection:'row',
@@ -25,12 +25,12 @@ export default StyleSheet.create({
       fontSize:RFValue(15),
   },
   profilePic:{
-    width:RFValue(50),
-    height:RFValue(50),
-    borderRadius: RFValue(50) / 2,
+    width:50,
+    height:50,
+    borderRadius: 50 / 2,
   },
   hello:{
-    marginTop:RFValue(30),
+    marginTop:30,
     color:'#B3B3B3',
     fontSize:RFValue(20),
   },

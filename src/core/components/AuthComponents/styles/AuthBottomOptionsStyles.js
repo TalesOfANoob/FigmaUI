@@ -6,7 +6,7 @@ export default StyleSheet.create({
   container: {
         flexDirection: 'row',
         width:'86%',
-        marginTop:RFValue(25),
+        marginTop:25,
   },
   optionText:{
         fontFamily:'Rubick-Regular',

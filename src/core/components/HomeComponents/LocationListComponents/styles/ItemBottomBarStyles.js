@@ -5,17 +5,21 @@ import { RFValue } from 'react-native-responsive-fontsize';
 export default StyleSheet.create({
 
     container:{
-        flexDirection:'row',
         alignSelf:'center',
-        width:'99.85%',
-        height:RFValue(100),
+        width:'100%',
+        height:100,
         backgroundColor:'white',
         position:'absolute',
         bottom:0,
-        borderRadius:RFValue(20),
+        borderRadius:20,
         overflow:'hidden',
-        paddingHorizontal:RFValue(20),
-        paddingVertical:RFValue(10),
+        paddingHorizontal:20,
+        paddingVertical:10,
+    },
+    sectionContainer:{
+        flexDirection:'row',
+        width:'100%',
+        height:65,
     },
     leftSection:{
 
@@ -29,16 +33,18 @@ export default StyleSheet.create({
         justifyContent:'space-evenly',
     },
     ownerContainer:{flexDirection:'row'},
+
     profilePic:{
-        width:RFValue(20),
-        height:RFValue(20),
-        borderRadius:RFValue(10),
+        width:20,
+        height:20,
+        borderRadius:10,
     },
     name:{
         fontSize:RFValue(21),
         color:'#143656',
     },
     owner:{
+        textAlignVertical:'center',
         fontSize:RFValue(12),
         color:'#143656',
     },
@@ -50,16 +56,16 @@ export default StyleSheet.create({
         alignItems:'center',
     },
     star:{
-        marginRight:RFValue(2),
+        marginRight:RFValue(1),
     },
     reviews:{
         fontSize:RFValue(10),
         color:'rgba(0, 0, 0, 0.2)',
         textAlignVertical:'center',
-        marginLeft:RFValue(5),
+        marginLeft:5,
     },
     price:{
-        fontSize:RFValue(18),
+        fontSize:RFValue(19),
         fontWeight:'bold',
         color:'#143656',
     },
@@ -68,7 +74,7 @@ export default StyleSheet.create({
     },
     specContainer:{
         flexDirection:'row',
-        marginRight:RFValue(10),
+        marginRight:10,
     },
     spec:{
         fontSize:RFValue(13),
@@ -81,7 +87,7 @@ export default StyleSheet.create({
     specText:{
         color:'#8A9BAB',
         fontSize:RFValue(13),
-        marginLeft:RFValue(5),
+        marginLeft:RFValue(1),
     },
 
 });

@@ -9,9 +9,9 @@ export default StyleSheet.create({
         overflow:'hidden',
         width:'100%',
         backgroundColor:'white',
-        height:RFValue(55),
-        borderTopRightRadius:RFValue(20),
-        borderTopLeftRadius:RFValue(20),
+        height:55,
+        borderTopRightRadius:20,
+        borderTopLeftRadius:20,
         justifyContent:'space-evenly',
         alignItems:'center'
     },

@@ -3,16 +3,17 @@ import React from 'react';
 import {View} from 'react-native';
 import {HomeScreenStyles as styles} from './styles';
 import {HomeCategoryList,HomeSearchBar,HomeTopSection,LocationList} from '../core/components/HomeComponents';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const HomeScreen = () =>{
 
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <HomeTopSection/>
             <HomeSearchBar/>
             <HomeCategoryList/>
             <LocationList/>
-        </View>
+        </ScrollView>
     );
 };
 

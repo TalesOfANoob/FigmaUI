@@ -1,11 +1,12 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
-import { RFValue } from 'react-native-responsive-fontsize';
 
 export default StyleSheet.create({
 
     list:{
-        marginTop:RFValue(20),
-        marginHorizontal:RFValue(-5),
+        marginTop:20,
+        marginBottom:20,
+        alignSelf:'center',
+        width:'99%',
     },
 });

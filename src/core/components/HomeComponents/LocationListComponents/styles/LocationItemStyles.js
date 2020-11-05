@@ -8,11 +8,11 @@ export default StyleSheet.create({
     container:{
         alignSelf:'center',
         overflow:'hidden',
-        height:RFValue(310),
+        height:310,
         width:'98%',
-        marginHorizontal:RFValue(20),
-        borderRadius:RFValue(20),
-        marginBottom:RFValue(10),
+        marginHorizontal:20,
+        borderRadius:20,
+        marginBottom:15,
 
         shadowColor: '#000',
         shadowOffset: {
@@ -30,12 +30,12 @@ export default StyleSheet.create({
     favIconContainer:{
         alignItems:'center',
         justifyContent:'center',
-        width:RFValue(35),
-        height:RFValue(35),
-        borderRadius:RFValue(17.5),
+        width:35,
+        height:35,
+        borderRadius:17.5,
         position:'absolute',
-        right:RFValue(38),
-        bottom:RFValue(85),
+        right:38,
+        bottom:85,
         zIndex:1,
         backgroundColor:'#FFFFFF',
         shadowColor: 'rgba(45, 87, 137, 0.25)',
@@ -57,23 +57,23 @@ export default StyleSheet.create({
     },
     favIconEnabled:{
         color:'#EB5A7C',
-        
+
     },
     favIconDisabled:{
         color:'#8A9BAB',
-        
+
     },
     locIcon:{
         fontSize:RFValue(15),
     },
     locationText:{
-        backgroundColor:'rgba(200, 200, 210, 0.4)',
+        backgroundColor:'rgba(255, 255, 255, 0.66)',
         position:'absolute',
-        left:RFValue(15),
-        top:RFValue(15),
-        paddingHorizontal:RFValue(15),
-        paddingVertical:RFValue(4),
-        borderRadius:RFValue(50),
+        left:15,
+        top:15,
+        paddingHorizontal:15,
+        paddingVertical:4,
+        borderRadius:50,
         color:'#143666',
     },
 

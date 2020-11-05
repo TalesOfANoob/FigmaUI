@@ -14,15 +14,16 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   formStyle: {
-    marginTop:RFValue(75),
+    marginTop:75,
+    marginBottom:20,
     width:'100%',
     alignItems: 'center',
     justifyContent: 'center',
   },
   welcomeIcon:{
-    marginTop:RFValue(25),
-    width:'43%',
-    height:RFValue(110),
+    marginTop:25,
+    width:'55%',
+    height:110,
   },
 
 });
