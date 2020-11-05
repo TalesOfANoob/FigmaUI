@@ -12,8 +12,6 @@ export default StyleSheet.create({
         height:RFValue(55),
         borderTopRightRadius:RFValue(20),
         borderTopLeftRadius:RFValue(20),
-        borderWidth:1,
-        borderColor:'rgba(0,0,0,0.2)',
         justifyContent:'space-evenly',
         alignItems:'center'
     },

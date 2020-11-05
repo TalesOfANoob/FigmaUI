@@ -1,0 +1,22 @@
+/* eslint-disable prettier/prettier */
+export const Ap = require('./Ap.png');
+export const ApSelected = require('./ApSelected.png');
+export const AuthBackground = require('./AuthBackground.png');
+export const Bath = require('./Bath.png');
+export const BlueStar = require('./BlueStar.png');
+export const CookieMonster = require('./CookieMonster.jpg');
+export const Discount = require('./Discount.png');
+export const DiscountSelected = require('./DiscountSelected.png');
+export const Dorm = require('./Dorm.png');
+export const Filter = require('./Filter.png');
+export const Home = require('./Home.png');
+export const HomeSelected = require('./HomeSelected.png');
+export const Key = require('./Key.png');
+export const KeySelected = require('./KeySelected.png');
+export const Kitchen = require('./Kitchen.png');
+export const LocImg = require('./LocImg.jpg');
+export const Search = require('./Search.png');
+export const ShowPassIcon = require('./ShowPassIcon.png');
+export const Star = require('./Star.png');
+export const UserConfirmIcon = require('./UserConfirmIcon.png');
+export const WelcomeIcon = require('./WelcomeIcon.png');

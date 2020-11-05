@@ -5,7 +5,7 @@ import {TabBarStyles as styles} from './styles';
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import SimpleIcon from 'react-native-vector-icons/SimpleLineIcons';
 import IonIcon from 'react-native-vector-icons/Ionicons';
-const CustomTabBar = () => {
+const CustomTabBar = ({ state, descriptors, navigation }) => {
     const [selected,setSelected] = useState(0);
     return <View style={styles.container}>
         <TouchableOpacity

@@ -4,6 +4,7 @@ import {Image} from 'react-native';
 import {Input} from 'react-native-elements';
 import {HomeSearchStyles as styles} from './styles';
 import {SearchStrings as strings} from './static';
+import {Filter,Search} from '../../resources'
 
 const HomeSearchBar = () => {
 
@@ -15,13 +16,13 @@ const HomeSearchBar = () => {
             rightIcon={
                 <Image
                     style={styles.rightIcon}
-                    source={require('../../../core/resources/Filter.png')}
+                    source={Filter}
                 />
             }
             leftIcon={
                 <Image
                     style={styles.leftIcon}
-                    source={require('../../../core/resources/Search.png')}
+                    source={Search}
                 />
             }
 

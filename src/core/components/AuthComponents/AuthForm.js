@@ -4,6 +4,7 @@ import {View, Text,Image,TouchableOpacity} from 'react-native';
 import {Button,Input} from 'react-native-elements';
 import {AuthFormStyles as styles} from './styles';
 import {AuthFormStrings as strings} from './static'
+import {UserConfirmIcon,ShowPassIcon} from '../../resources'
 
 const validateEmail=(email)=>{
 
@@ -33,7 +34,7 @@ const AuthForm = ({headerText,submitText,onSubmitCallback})=>{
             placeholder={strings.emailPlaceholder}
             rightIcon={
                 valid
-                ?<Image style={[styles.userIcon,styles.icon]} source={require('../../resources/UserConfirmIcon.png')}/>
+                ?<Image style={[styles.userIcon,styles.icon]} source={UserConfirmIcon}/>
                 :null
             }
             inputStyle={styles.input}
@@ -56,7 +57,7 @@ const AuthForm = ({headerText,submitText,onSubmitCallback})=>{
                         showPass ? setShowPass(false) : setShowPass(true);
                     }}
                 >
-                    <Image style={[styles.passIcon,styles.icon]} source={require('../../resources/ShowPassIcon.png')}/>
+                    <Image style={[styles.passIcon,styles.icon]} source={ShowPassIcon}/>
                 </TouchableOpacity>
             }
             inputStyle={styles.input}

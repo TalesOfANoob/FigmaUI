@@ -12,29 +12,29 @@ const Tabs = createBottomTabNavigator();
 const HomeNavigator = ()=>(
 
 
-        <Tabs.Navigator 
+        <Tabs.Navigator
         screenOptions={defaultNavigationOptions}
         initialRouteName={roots.homeScreen}
         tabBar={props=><CustomTabBar {...props}/>}
         >
-            <Tabs.Screen 
+            <Tabs.Screen
                 screenOptions={defaultNavigationOptions}
                 name={roots.homeScreen}
                 component={HomeScreen}
             />
-            <Tabs.Screen 
+            <Tabs.Screen
                 screenOptions={defaultNavigationOptions}
-                name={roots.homeScreen+"1"}
+                name={roots.homeScreen + '1'}
                 component={HomeScreen}
             />
-            <Tabs.Screen 
+            <Tabs.Screen
                 screenOptions={defaultNavigationOptions}
-                name={roots.homeScreen+"2"}
+                name={roots.homeScreen + '2'}
                 component={HomeScreen}
             />
-            <Tabs.Screen 
+            <Tabs.Screen
                 screenOptions={defaultNavigationOptions}
-                name={roots.homeScreen+"3"}
+                name={roots.homeScreen + '3'}
                 component={HomeScreen}
             />
         </Tabs.Navigator>

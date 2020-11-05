@@ -7,7 +7,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {TopSectioStyles as styles} from './styles';
 import {TopSectionStrings as strings} from './static';
-
+import {CookieMonster} from '../../resources'
 const HomeTopSection = () => {
 
     return (
@@ -15,7 +15,7 @@ const HomeTopSection = () => {
             <View style={styles.topBar}>
 
                     <Image
-                    source={require('../../resources/CookieMonster.jpg')}
+                    source={CookieMonster}
                     style={styles.profilePic}
                     />
                     <View style={styles.location}>

@@ -6,5 +6,6 @@ export default StyleSheet.create({
 
     list:{
         marginTop:RFValue(20),
+        marginHorizontal:RFValue(-5),
     },
 });

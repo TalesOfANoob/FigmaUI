@@ -5,7 +5,7 @@ import { RFValue } from 'react-native-responsive-fontsize';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:'#f0f6ff',
+    backgroundColor:'#F4F8FC',
     padding:RFValue(20),
     paddingBottom:0,
   },

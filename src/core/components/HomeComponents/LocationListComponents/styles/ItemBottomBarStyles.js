@@ -77,6 +77,11 @@ export default StyleSheet.create({
         alignSelf:'center',
         width:RFValue(13),
         height:RFValue(11),
-    }
+    },
+    specText:{
+        color:'#8A9BAB',
+        fontSize:RFValue(13),
+        marginLeft:RFValue(5),
+    },
 
 });

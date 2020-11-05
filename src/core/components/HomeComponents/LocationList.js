@@ -3,12 +3,13 @@ import React from 'react';
 import {FlatList} from 'react-native';
 import {LocationItem} from './LocationListComponents';
 import {LocationListStyles as styles} from './styles';
+import {LocImg} from '../../resources'
 const LocationList = () => {
 
 
     const data = [
         {
-            img:require('../../resources/LocImg.jpg'),
+            img:LocImg,
             name:'location1',
             price:1234,
             owner:'Cookie Monster',
@@ -18,7 +19,7 @@ const LocationList = () => {
             location:'Los Angeles, CA',
         },
         {
-            img:require('../../resources/LocImg.jpg'),
+            img:LocImg,
             name:'location2',
             price:4321,
             owner:'Cookie Monster',

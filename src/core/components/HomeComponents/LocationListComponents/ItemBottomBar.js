@@ -2,6 +2,16 @@
 import React from 'react';
 import {View,Text,Image} from 'react-native';
 import {ItemBottomBarStyles as styles} from './styles';
+import{
+
+    BlueStar,
+    Star,
+    CookieMonster,
+    Dorm,
+    Bath,
+    Kitchen
+
+} from '../../../resources'
 
 
 const genStars = (stars)=>{
@@ -10,9 +20,9 @@ const genStars = (stars)=>{
     for (let i = 0; i < 5; i++){
 
         if (i < stars){
-            jsx.push(<Image style={styles.star} source={require('../../../resources/BlueStar.png')}/>);
+            jsx.push(<Image style={styles.star} source={BlueStar}/>);
         } else {
-            jsx.push(<Image style={styles.star} source={require('../../../resources/Star.png')}/>);
+            jsx.push(<Image style={styles.star} source={Star}/>);
         }
     }
     return jsx;
@@ -27,7 +37,7 @@ const ItemBottomBar = ({name,owner,stars,reviews,price,specs})=>{
 
                 <View style={styles.ownerContainer}>
                     <Image
-                        source={require('../../../resources/CookieMonster.jpg')}
+                        source={CookieMonster}
                         style={styles.profilePic}
                         />
                     <Text style={styles.owner}>{owner}</Text>
@@ -49,18 +59,18 @@ const ItemBottomBar = ({name,owner,stars,reviews,price,specs})=>{
                 </Text>
                 <View style={styles.specsContainer}>
                     <View style={styles.specContainer}>
-                        <Image style={styles.specIcon} source={require('../../../resources/Dorm.png')}/>
-                        <Text>{specs[0]}</Text>
+                        <Image style={styles.specIcon} source={Dorm}/>
+                        <Text style={styles.specText}>{specs[0]}</Text>
                     </View>
 
                     <View style={styles.specContainer}>
-                        <Image style={styles.specIcon} source={require('../../../resources/Bath.png')}/>
-                        <Text>{specs[1]}</Text>
+                        <Image style={styles.specIcon} source={Bath}/>
+                        <Text style={styles.specText}>{specs[1]}</Text>
                     </View>
 
                     <View style={styles.specContainer}>
-                        <Image style={styles.specIcon} source={require('../../../resources/Kitchen.png')}/>
-                        <Text>{specs[2]}</Text>
+                        <Image style={styles.specIcon} source={Kitchen}/>
+                        <Text style={styles.specText}>{specs[2]}</Text>
                     </View>
                 </View>
             </View>

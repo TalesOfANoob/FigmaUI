@@ -6,10 +6,11 @@ import { RFValue } from 'react-native-responsive-fontsize';
 export default StyleSheet.create({
 
     container:{
-        flex:1,
+        alignSelf:'center',
         overflow:'hidden',
         height:RFValue(310),
-        width:'100%',
+        width:'98%',
+        marginHorizontal:RFValue(20),
         borderRadius:RFValue(20),
         marginBottom:RFValue(10),
 
