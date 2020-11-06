@@ -23,7 +23,7 @@ export default StyleSheet.create({
   welcomeIcon:{
     marginTop:25,
     width:'55%',
-    height:110,
+    height:RFValue(110),
   },
 
 });

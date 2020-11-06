@@ -22,21 +22,6 @@ const HomeNavigator = ()=>(
                 name={roots.homeScreen}
                 component={HomeScreen}
             />
-            <Tabs.Screen
-                screenOptions={defaultNavigationOptions}
-                name={roots.homeScreen + '1'}
-                component={HomeScreen}
-            />
-            <Tabs.Screen
-                screenOptions={defaultNavigationOptions}
-                name={roots.homeScreen + '2'}
-                component={HomeScreen}
-            />
-            <Tabs.Screen
-                screenOptions={defaultNavigationOptions}
-                name={roots.homeScreen + '3'}
-                component={HomeScreen}
-            />
         </Tabs.Navigator>
 
 );
