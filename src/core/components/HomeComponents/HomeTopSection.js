@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {View, Text,Image} from 'react-native';
+import {View, Text,Image,TouchableOpacity} from 'react-native';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -8,7 +8,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import {TopSectioStyles as styles} from './styles';
 import {TopSectionStrings as strings} from './static';
 import {CookieMonster} from '../../resources'
-const HomeTopSection = () => {
+const HomeTopSection = ({navigation}) => {
 
     return (
         <View>
@@ -33,10 +33,14 @@ const HomeTopSection = () => {
                         name="bell"
                         style={styles.icon}
                     />
-                    <AntDesign
-                        name="setting"
-                        style={styles.icon}
-                    />
+                    <TouchableOpacity
+                        onPress={()=>navigation.navigate('AccountScreen')}
+                    >
+                        <AntDesign
+                            name="setting"
+                            style={styles.icon}
+                        />
+                    </TouchableOpacity>
             </View>
 
             <Text style={styles.hello}>{strings.helloString}</Text>

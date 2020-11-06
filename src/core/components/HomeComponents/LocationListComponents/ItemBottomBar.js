@@ -33,7 +33,7 @@ const ItemBottomBar = ({name,owner,stars,reviews,price,specs})=>{
 
     return (
         <View style={styles.container}>
-            <View><Text style={styles.name}>{name}</Text></View>
+            <><Text style={styles.name}>{name}</Text></>
             <View style={styles.sectionContainer}>
                 <View style={styles.rightSection}>
                     <View style={styles.ownerContainer}>

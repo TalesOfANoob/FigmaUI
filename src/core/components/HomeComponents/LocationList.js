@@ -1,8 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {FlatList} from 'react-native';
-import {LocationItem} from './LocationListComponents';
 import {LocationListStyles as styles} from './styles';
+import {CustomLocationList} from './LocationListComponents';
 import {LocImg} from '../../resources';
 const LocationList = () => {
 
@@ -29,27 +28,9 @@ const LocationList = () => {
             location:'Los Angeles, CA',
         },
     ];
-
     return (
+            <CustomLocationList data={data} style={styles.list}/>
 
-        <FlatList
-            style={styles.list}
-            scrollEnabled={false}
-            data={data}
-            keyExtractor={(item,index)=>index}
-            renderItem={({item})=>{
-                return (<LocationItem
-                    img={item.img}
-                    name={item.name}
-                    price={item.price}
-                    owner={item.owner}
-                    stars={item.stars}
-                    reviews={item.reviews}
-                    specs={item.specs}
-                    location={item.location}
-                />);
-            }}
-        />
     );
 };
 
