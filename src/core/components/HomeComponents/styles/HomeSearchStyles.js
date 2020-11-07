@@ -5,7 +5,9 @@ import { RFValue } from 'react-native-responsive-fontsize';
 export default StyleSheet.create({
 
     container:{
+        position:'relative',
         height:50,
+        width:'98.5%',
         alignSelf:'center',
         backgroundColor: '#FFFFFF',
         shadowColor: 'rgba(29, 40, 142, 0.07)',
@@ -15,7 +17,7 @@ export default StyleSheet.create({
         },
         shadowOpacity: 0.34,
         shadowRadius: 10,
-        elevation: 10,
+        elevation: 4,
         borderRadius: 10,
         marginTop:30,
         paddingHorizontal:20,
