@@ -8,9 +8,9 @@ export const genStars = (stars,style1,style2)=>{
     for (let i = 0; i < 5; i++){
 
         if (i < stars){
-            jsx.push(<Image style={style1} source={BlueStar}/>);
+            jsx.push(<Image key={i} style={style1} source={BlueStar}/>);
         } else {
-            jsx.push(<Image style={style2} source={Star}/>);
+            jsx.push(<Image key={i} style={style2} source={Star}/>);
         }
     }
     return jsx;

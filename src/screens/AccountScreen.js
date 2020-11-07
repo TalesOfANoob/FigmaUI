@@ -5,6 +5,7 @@ import EntypoIcon from 'react-native-vector-icons/Entypo';
 import {AccountScreenStyles as styles} from './styles';
 import {genStars} from './../core/helpers';
 import {CookieMonster} from '../core/resources';
+import { AccountContent } from '../core/components/AccountScreenComponents';
 const AccountScreen = ({navigation}) =>{
     const mockData = {
         name:'Cookie Monster',
@@ -40,6 +41,7 @@ const AccountScreen = ({navigation}) =>{
                     <Image style={styles.profilePic} source={mockData.profilePic}/>
                 </View>
             </View>
+            <AccountContent/>
         </ScrollView>
     );
 };

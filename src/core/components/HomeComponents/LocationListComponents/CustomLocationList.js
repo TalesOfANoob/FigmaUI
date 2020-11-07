@@ -8,6 +8,7 @@ const renderItem = (data)=>{
     for (let i = 0; i < data.length; i++){
         const item = data[i];
         jsx.push(<LocationItem
+            key={item.owner + item.reviews + item.specs + item.price}
             img={item.img}
             name={item.name}
             price={item.price}
