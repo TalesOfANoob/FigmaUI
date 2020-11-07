@@ -17,6 +17,7 @@ export default StyleSheet.create({
     },
     statsList:{
         width:'100%',
+        height:400,
     },
     goldHeader:{
         fontSize:RFValue(20),
