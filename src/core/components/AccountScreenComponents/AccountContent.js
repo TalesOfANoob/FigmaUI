@@ -1,4 +1,3 @@
-/* eslint-disable no-shadow */
 /* eslint-disable prettier/prettier */
 import React,{useState,useEffect} from 'react';
 import {View,Text,ScrollView} from 'react-native';
@@ -6,6 +5,7 @@ import {AccountContentStyle as styles} from './styles';
 import strings from './static/strings';
 import Svg,{Text as SvgText,Circle} from 'react-native-svg';
 import { RFValue } from 'react-native-responsive-fontsize';
+import Animated from 'react-native-reanimated';
 const AccountContent = () => {
 
     const size = 65;
@@ -29,7 +29,7 @@ const AccountContent = () => {
 
         }, 10);
     },[]);
-
+    //Animated.timing(setLevel(l=>l < 100 ? l + 0.5 : 0))
     const fillLevel = ( level * circumference) / 100;
 
     return (
