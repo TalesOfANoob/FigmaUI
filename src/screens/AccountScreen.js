@@ -1,11 +1,11 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {ScrollView,TouchableOpacity,Text, View,Image} from 'react-native';
-import EntypoIcon from 'react-native-vector-icons/Entypo';
 import {AccountScreenStyles as styles} from './styles';
 import {genStars} from './../core/helpers';
 import {CookieMonster} from '../core/resources';
 import { AccountContent } from '../core/components/AccountScreenComponents';
+import EntypoIcon from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 const AccountScreen = ({navigation}) =>{
     const mockData = {

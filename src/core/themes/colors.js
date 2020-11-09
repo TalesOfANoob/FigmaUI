@@ -15,6 +15,8 @@ export default {
     iconDisabled:'#8A9BAB',
     iconEnabled:'#EB5A7C',
     stroke:'#46D0D9',
-    strokeEmpty:'#e3e3e3'
+    strokeEmpty:'#e3e3e3',
+    availableGreen:'#6CC775',
+    unAvailableRed:'#c76d6c',
 
 };

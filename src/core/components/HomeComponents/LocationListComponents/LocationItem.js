@@ -5,12 +5,12 @@ import {LocationItemStyles as styles} from './styles';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import ItemBottomBar from './ItemBottomBar';
-import {useNavigation} from '@react-navigation/native'
+import {useNavigation} from '@react-navigation/native';
 const LocationItem = ({img,name,price,owner,stars,reviews,specs,location,favEnabled = true}) =>{
 
     const [fav,setFav] = useState(false);
     const navigation = useNavigation();
-    const jsx=(
+    const jsx = (
     <View style={styles.container}>
         <ImageBackground
             key={img}
@@ -34,11 +34,11 @@ const LocationItem = ({img,name,price,owner,stars,reviews,specs,location,favEnab
     </View>);
 
     return (
-        
+
         favEnabled
-        ?<TouchableOpacity onPress={()=>navigation.navigate('LocationDetailScreen')}>{jsx}</TouchableOpacity>
-        :jsx
-        
+        ? <TouchableOpacity onPress={()=>navigation.navigate('LocationDetailScreen',{location,name,specs,price})}>{jsx}</TouchableOpacity>
+        : jsx
+
     );
 
 };
