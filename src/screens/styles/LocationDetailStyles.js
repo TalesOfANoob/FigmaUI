@@ -3,7 +3,10 @@ import {StyleSheet} from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import colors from '../../core/themes/colors';
 export default StyleSheet.create({
-    
+    container:{
+
+        flex:1,
+    },
     locationImage:{
         width:'100%',
         height:405,
@@ -13,7 +16,7 @@ export default StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-around',
         alignItems:'center',
-        marginTop:85,
+        marginTop:75,
     },
     backIconContainer:{
         width:42,
@@ -83,11 +86,12 @@ export default StyleSheet.create({
 
     },
     locationInfo:{
-        backgroundColor:colors.backgroundWhite,
+        backgroundColor:colors.backgroundLightGrey,
         position:'relative',
         top:-30,
         borderRadius:32,
-        paddingVertical:40,
+        paddingVertical:30,
+        marginBottom:-30,
     },
     infoHeader:{
         flexDirection:'row',
@@ -123,7 +127,7 @@ export default StyleSheet.create({
     },
     facilities:{
         flexDirection:'row',
-        marginTop:11,
+        marginTop:10,
         paddingHorizontal:25,
     },
     facilityText:{
@@ -139,16 +143,86 @@ export default StyleSheet.create({
     },
     specsContainer:{
         flexDirection:'row',
-        marginTop:20,
+        marginTop:10,
         paddingHorizontal:25,
     },
     specContainer:{
         flexDirection:'row',
     },
     specIcon:{
-        color:colors.iconCyan
+        fontSize:RFValue(18),
+        color:colors.iconCyan,
+        textAlignVertical:'center'
     },
     specText:{
-        color:colors.fontLightGrey
+        fontSize:RFValue(19),
+        color:colors.fontGrey,
+        marginLeft:RFValue(4),
+        marginRight:RFValue(40),
+    },
+    categoriesContainer:{
+        borderTopWidth:2,
+        borderBottomWidth:2,
+        borderColor:colors.fontGrey,
+        flexDirection:'row',
+        justifyContent:'space-around',
+        paddingVertical:10,
+        marginTop:20,
+    },
+    categoryContainer:{
+        justifyContent:'center',
+        alignItems:'center',
+    },
+    categoryIcon:{
+        fontSize:RFValue(30),
+        color:colors.fontGrey,
+    },
+    categoryText:{
+        fontSize:RFValue(12),
+        color:colors.fontGrey,
+    },
+    selectedCategory:{
+        color:colors.iconCyan,
+    },
+    descriptionHeader:{
+        marginTop:25,
+        paddingHorizontal:25,
+        fontSize:RFValue(20),
+        fontWeight:'bold',
+        color:colors.fontBlue,
+
+    },
+    descriptionText:{
+        marginTop :15,
+        paddingHorizontal:25,
+        fontSize:RFValue(12),
+        color:colors._50black,
+    },
+    reserveContainer:{
+        backgroundColor:colors.backgroundWhite,
+        width:'100%',
+        height:70,
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'center',
+        borderTopLeftRadius:20,
+        borderTopRightRadius:20,
+    },
+    price:{
+        fontSize:RFValue(24),
+        fontWeight:'bold',
+        color:colors.fontBlue,
+        marginLeft:45,
+    },
+    reserveButton:{
+        fontSize:RFValue(16),
+        textAlign:'center',
+        textAlignVertical:'center',
+        backgroundColor:colors.backgroundStrongCyan,
+        color:colors.backgroundWhite,
+        marginRight:35,
+        width:RFValue(170),
+        height:40,
+        borderRadius:10,
     },
 });

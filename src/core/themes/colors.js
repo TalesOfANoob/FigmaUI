@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 export default {
     backgroundWhite:'#FFFFFF',
+    backgroundLightGrey:'#F8FBFF',
     backgroundReducedWhite:'rgba(255, 255, 255, 0.66)',
     backgroundCyan:'#F4F8FC',
     backgroundStrongCyan:'#46D0D9',
@@ -18,5 +19,5 @@ export default {
     strokeEmpty:'#e3e3e3',
     availableGreen:'#6CC775',
     unAvailableRed:'#c76d6c',
-
+    _50black:'rgba(0,0,0,0.5)',
 };
