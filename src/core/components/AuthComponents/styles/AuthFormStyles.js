@@ -1,20 +1,21 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
+import colors from '../../../themes/colors';
 export default StyleSheet.create({
   header: {
     marginTop:75,
     fontFamily: 'Rubik-Regular',
     fontSize: RFValue(40),
     fontWeight: 'bold',
-    color: '#13497B',
+    color: colors.fontAuthBlue,
     textAlign: 'center',
   },
   subHeader: {
     fontFamily: 'Rubik-Regular',
     fontSize: RFValue(20),
     fontWeight: '300',
-    color: 'rgba(0, 0, 0, 0.3)',
+    color: colors.fontGrey,
     textAlign: 'center',
     marginBottom:30,
   },
@@ -23,7 +24,7 @@ export default StyleSheet.create({
   },
   inputContainer: {
     borderBottomWidth: 0,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: colors.backgroundWhite,
     shadowColor: 'rgba(29, 40, 142, 0.07)',
     shadowOffset: {
       width: 0,
@@ -39,12 +40,12 @@ export default StyleSheet.create({
   input:{
     fontSize:RFValue(15),
     fontFamily:'Rubick-Regular',
-    color:'rgba(0,0,0,0.8)',
+    color: colors.fontOption1,
   },
   passInput:{
     fontSize:RFValue(25),
     fontFamily:'Rubick-Regular',
-    color:'rgba(0,0,0,0.8)',
+    color: colors.fontOption1,
   },
   passIcon: {
     width: 19,
@@ -56,7 +57,7 @@ export default StyleSheet.create({
   },
   inputLabel: {
     marginBottom: 10,
-    color: '#13497B',
+    color: colors.fontAuthBlue,
     fontSize: RFValue(15),
   },
   formButtonContainer:{
@@ -73,7 +74,7 @@ export default StyleSheet.create({
   formButton:{
 
     paddingVertical:15,
-    backgroundColor: '#13497B',
+    backgroundColor: colors.fontAuthBlue,
     borderRadius: 10,
   },
   componentContainer:{

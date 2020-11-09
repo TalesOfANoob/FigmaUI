@@ -1,36 +1,26 @@
 /* eslint-disable prettier/prettier */
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import {View,Text,ScrollView} from 'react-native';
 import {AccountContentStyle as styles} from './styles';
 import strings from './static/strings';
-import Svg,{Text as SvgText,Circle} from 'react-native-svg';
-import { RFValue } from 'react-native-responsive-fontsize';
-import Animated from 'react-native-reanimated';
+import Svg,{Circle} from 'react-native-svg';
+
 const AccountContent = () => {
 
-    const size = 65;
-    const strokeWidth = 15;
+    const size = 50;
+    const strokeWidth = 12;
     const radius = size - strokeWidth;
     const circumference = 2 * Math.PI * radius;
 
     const mockData = {
         estadistics:{
-            level:30,
+            level:60,
             sales:10,
             client:9,
 
         },
     };
-    const [level,setLevel] = useState(0);
-    useEffect(()=>{
-        setInterval(() => {
-
-            setLevel(l=>l < 100 ? l + 0.5 : 0);
-
-        }, 10);
-    },[]);
-    //Animated.timing(setLevel(l=>l < 100 ? l + 0.5 : 0))
-    const fillLevel = ( level * circumference) / 100;
+    const fillLevel = ( mockData.estadistics.level * circumference) / 100;
 
     return (
     <View style={styles.container}>
@@ -41,40 +31,57 @@ const AccountContent = () => {
 
             style={styles.statsList}
          >
-            <View >
+            <View style={styles.statsContainer}>
                 <Text
-                    style={styles.estatistics}>
+                    style={styles.estatisticsHeader}>
                     {strings.estadistics}
                 </Text>
+                <View style={styles.estatisticsMiddleSection}>
+                    <View style={styles.estatisticsLevelContainer}>
+                        <View style={styles.estatisticsLevelTextContainer}>
+                            <Text style={styles.estatisticsLevelText}>
+                                {mockData.estadistics.level}
+                            </Text>
+                            <Text>{strings.level}</Text>
+                        </View>
+                        <Svg style={styles.levelCircle}>
 
-                <Svg style={{width:size * 2,height:size * 2}}>
+                            <Circle
+                                stroke="#e3e3e3"
+                                fill="none"
+                                r={radius}
+                                cx={56}
+                                cy={48}
+                                strokeWidth={strokeWidth}
+                                strokeDasharray={`${circumference}`}
+                            />
+                            <Circle
 
-                    <Circle
-                        stroke="#e3e3e3"
-                        fill="none"
-                        r={radius}
-                        cx={size}
-                        cy={size}
-                        strokeWidth={strokeWidth}
-                        strokeDasharray={`${circumference}`}
-                    />
-                    <Circle
+                                stroke="#46D0D9"
+                                fill="none"
+                                r={radius}
+                                cx={56}
+                                cy={48}
+                                strokeWidth={strokeWidth}
+                                strokeDasharray={`${fillLevel} ${circumference - fillLevel}`}
+                                strokeDashoffset={circumference / 6}
 
-                        stroke="#46D0D9"
-                        fill="none"
-                        r={radius}
-                        cx={size}
-                        cy={size}
-                        strokeWidth={strokeWidth}
-                        strokeDasharray={`${fillLevel} ${circumference - fillLevel}`}
-                        strokeDashoffset={circumference / 6}
+                            />
 
-                    />
+                        </Svg>
 
-                </Svg>
+                    </View>
 
+                    <View style={styles.estatisticsTextContainer}>
+                        <Text>a</Text>
+                        <Text>b</Text>
+                    </View>
 
-
+                </View>
+                <Text style={styles.estatisticsFooter}>
+                    asd
+                    
+                </Text>
             </View>
          </ScrollView>
     </View>);

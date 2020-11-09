@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
-
+import colors from '../../../themes/colors';
 export default StyleSheet.create({
   container: {
         flexDirection: 'row',
@@ -17,7 +17,7 @@ export default StyleSheet.create({
   },
   option1Text: {
 
-        color:'rgba(0, 0, 0, 0.8)',
+        color:colors.fontOption1,
 
   },
   option2: {
@@ -25,7 +25,7 @@ export default StyleSheet.create({
   },
   option2Text: {
 
-        color:'#13497B',
+        color:colors.fontOption2,
         textAlign: 'right',
         fontWeight:'bold',
     },

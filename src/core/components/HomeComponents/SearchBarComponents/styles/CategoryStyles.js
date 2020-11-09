@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
-
+import colors from '../../../../themes/colors'
 export default StyleSheet.create({
 
     defaultContainer:{
@@ -12,7 +12,7 @@ export default StyleSheet.create({
     container:{
         width:RFValue(75),
         height:RFValue(75),
-        backgroundColor:'#FFFFFF',
+        backgroundColor:colors.backgroundWhite,
 
         shadowColor: '#000',
         shadowOffset: {
@@ -26,13 +26,13 @@ export default StyleSheet.create({
     selectedContainer:{
         width:RFValue(75),
         height:RFValue(100),
-        backgroundColor:'#46D0D9',
+        backgroundColor: colors.backgroundStrongCyan,
     },
     title:{
         marginTop:RFValue(15),
         fontSize:RFValue(18),
         fontWeight:'bold',
-        color:'#FFFFFF',
+        color: colors.backgroundWhite,
     },
 
 
