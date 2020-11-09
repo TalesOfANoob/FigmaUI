@@ -1,20 +1,20 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
-
+import colors from '../../../../themes/colors'
 export default StyleSheet.create({
 
     container:{
         alignSelf:'center',
         width:'100%',
         height:100,
-        backgroundColor:'white',
+        backgroundColor:colors.backgroundWhite,
         position:'absolute',
         bottom:0,
         borderRadius:20,
         overflow:'hidden',
         paddingHorizontal:20,
-        paddingVertical:10,
+        paddingTop:15,
     },
     sectionContainer:{
         flexDirection:'row',
@@ -25,12 +25,14 @@ export default StyleSheet.create({
 
         flex:1,
         justifyContent:'space-evenly',
+        paddingBottom:19,
 
     },
     rightSection:{
 
         flex:1.8,
         justifyContent:'space-evenly',
+        paddingBottom:19,
     },
     ownerContainer:{flexDirection:'row'},
 
@@ -41,12 +43,12 @@ export default StyleSheet.create({
     },
     name:{
         fontSize:RFValue(21),
-        color:'#143656',
+        color:colors.fontBlue,
     },
     owner:{
         textAlignVertical:'center',
         fontSize:RFValue(12),
-        color:'#143656',
+        color:colors.fontBlue,
     },
     reviewContainer:{
         flexDirection:'row',
@@ -60,14 +62,14 @@ export default StyleSheet.create({
     },
     reviews:{
         fontSize:RFValue(10),
-        color:'rgba(0, 0, 0, 0.2)',
+        color:colors.fontLightGrey,
         textAlignVertical:'center',
         marginLeft:5,
     },
     price:{
         fontSize:RFValue(19),
         fontWeight:'bold',
-        color:'#143656',
+        color:colors.fontBlue,
     },
     specsContainer:{
         flexDirection:'row',
@@ -85,9 +87,9 @@ export default StyleSheet.create({
         height:RFValue(11),
     },
     specText:{
-        color:'#8A9BAB',
+        color:colors.fontGrey,
         fontSize:RFValue(13),
-        marginLeft:RFValue(1),
+        marginLeft:RFValue(6),
     },
 
 });

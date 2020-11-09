@@ -5,8 +5,6 @@ import {ItemBottomBarStyles as styles} from './styles';
 
 import {
 
-    BlueStar,
-    Star,
     CookieMonster,
     Dorm,
     Bath,

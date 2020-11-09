@@ -22,13 +22,11 @@ export default StyleSheet.create({
     leftSection:{
         alignItems:'flex-start',
         justifyContent:'center',
-        borderWidth:1,
         flex:1,
     },
     rightSection:{
         alignItems:'center',
         justifyContent:'center',
-        borderWidth:1,
         flex:1,
     },
     name:{
@@ -38,6 +36,10 @@ export default StyleSheet.create({
     },
     locationContainer:{
         flexDirection:'row'
+    },
+    locIcon:{
+        fontSize:RFValue(15),
+        color:colors.fontBlue,
     },
     locationText:{
         fontSize:RFValue(12),

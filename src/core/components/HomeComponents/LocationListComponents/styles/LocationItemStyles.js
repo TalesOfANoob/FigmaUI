@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
-import { color } from 'react-native-reanimated';
 import { RFValue } from 'react-native-responsive-fontsize';
+import colors from '../../../../themes/colors';
 
 export default StyleSheet.create({
 
@@ -9,10 +9,10 @@ export default StyleSheet.create({
         alignSelf:'center',
         overflow:'hidden',
         height:310,
-        width:'98%',
+        width:'99.5%',
         marginHorizontal:20,
         borderRadius:20,
-        marginBottom:15,
+        marginBottom:21,
 
         shadowColor: '#000',
         shadowOffset: {
@@ -56,25 +56,25 @@ export default StyleSheet.create({
         fontSize:RFValue(20),
     },
     favIconEnabled:{
-        color:'#EB5A7C',
+        color:colors.iconEnabled,
 
     },
     favIconDisabled:{
-        color:'#8A9BAB',
+        color:colors.iconDisabled,
 
     },
     locIcon:{
         fontSize:RFValue(15),
     },
     locationText:{
-        backgroundColor:'rgba(255, 255, 255, 0.66)',
+        backgroundColor: colors.backgroundReducedWhite,
         position:'absolute',
         left:15,
         top:15,
         paddingHorizontal:15,
         paddingVertical:4,
         borderRadius:50,
-        color:'#143666',
+        color:colors.fontBlue,
     },
 
 

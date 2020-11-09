@@ -22,8 +22,8 @@ export default StyleSheet.create({
   },
   welcomeIcon:{
     marginTop:25,
-    width:'55%',
-    height:RFValue(140),
+    width:185,
+    height:120,
   },
 
 });

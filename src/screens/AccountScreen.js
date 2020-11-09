@@ -6,12 +6,13 @@ import {AccountScreenStyles as styles} from './styles';
 import {genStars} from './../core/helpers';
 import {CookieMonster} from '../core/resources';
 import { AccountContent } from '../core/components/AccountScreenComponents';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 const AccountScreen = ({navigation}) =>{
     const mockData = {
         name:'Cookie Monster',
         stars:'4',
         opinions:'10',
-        location:'Los angeles,CA',
+        location:'Los angeles, CA',
         profilePic: CookieMonster,
     };
     return (
@@ -34,7 +35,7 @@ const AccountScreen = ({navigation}) =>{
                         <Text style={styles.opinions} >{`(${mockData.opinions})`}</Text>
                     </View>
                     <View style={styles.locationContainer}>
-                        <Text style={styles.locationText}>{mockData.location}</Text>
+                    <Ionicons style={styles.locIcon} name="location-outline"/><Text style={styles.locationText}>{mockData.location}</Text>
                     </View>
                 </View>
                 <View  style={styles.rightSection}>
