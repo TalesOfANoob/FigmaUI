@@ -12,7 +12,6 @@ export default StyleSheet.create({
   topHeader: {
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop:25,
   },
   formStyle: {
     marginTop:75,
@@ -22,7 +21,9 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   welcomeIcon:{
-    flex:1,
+    marginTop:25,
+    width:'55%',
+    height:RFValue(140),
   },
 
 });
