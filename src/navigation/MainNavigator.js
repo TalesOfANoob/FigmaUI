@@ -5,8 +5,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import roots from './roots';
 import LoginScreen from '../screens/LoginScreen';
 import HomeNavigator from './HomeNavigator';
-import AccountScreen from '../screens/AccountScreen'
-import LocationDetailScreen from '../screens/LocationDetailScreen'
+import AccountScreen from '../screens/AccountScreen';
+import LocationDetailScreen from '../screens/LocationDetailScreen';
 const defaultNavigationOptions = () => ({
     gestureEnabled: false,
     headerShown: false,

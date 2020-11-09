@@ -5,10 +5,11 @@ import {LocationItemStyles as styles} from './styles';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import ItemBottomBar from './ItemBottomBar';
-import {withNavigation} from 'react-navigation'
-const LocationItem = ({navigation,img,name,price,owner,stars,reviews,specs,location,favEnabled = true}) =>{
+import {useNavigation} from '@react-navigation/native'
+const LocationItem = ({img,name,price,owner,stars,reviews,specs,location,favEnabled = true}) =>{
 
     const [fav,setFav] = useState(false);
+    const navigation = useNavigation();
     const jsx=(
     <View style={styles.container}>
         <ImageBackground
@@ -44,4 +45,4 @@ const LocationItem = ({navigation,img,name,price,owner,stars,reviews,specs,locat
 
 
 
-export default withNavigation(LocationItem);
+export default LocationItem;

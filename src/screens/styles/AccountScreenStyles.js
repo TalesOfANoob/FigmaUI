@@ -35,7 +35,7 @@ export default StyleSheet.create({
         fontWeight:'bold',
     },
     locationContainer:{
-        flexDirection:'row'
+        flexDirection:'row',
     },
     locIcon:{
         fontSize:RFValue(15),
