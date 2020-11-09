@@ -20,7 +20,7 @@ export default StyleSheet.create({
         color:'rgba(0,0,0,0.3)',
     },
     iconSelected:{
-        fontSize:RFValue(35),
+        fontSize:RFValue(30),
         color:'#46D0D9',
     },
 

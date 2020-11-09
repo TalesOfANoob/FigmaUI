@@ -3,37 +3,22 @@ import React from 'react';
 import {View,Text,Image} from 'react-native';
 import {ItemBottomBarStyles as styles} from './styles';
 
-import{
+import {
 
     BlueStar,
     Star,
     CookieMonster,
     Dorm,
     Bath,
-    Kitchen
+    Kitchen,
 
-} from '../../../resources'
-
-
-const genStars = (stars)=>{
-
-    let jsx = [];
-    for (let i = 0; i < 5; i++){
-
-        if (i < stars){
-            jsx.push(<Image style={styles.star} source={BlueStar}/>);
-        } else {
-            jsx.push(<Image style={styles.star} source={Star}/>);
-        }
-    }
-    return jsx;
-};
-
+} from '../../../resources';
+import {genStars} from '../../../helpers'
 const ItemBottomBar = ({name,owner,stars,reviews,price,specs})=>{
 
     return (
-        <View style={styles.container}>
-            <View><Text style={styles.name}>{name}</Text></View>
+        <View style={styles.container} >
+            <><Text style={styles.name}>{name}</Text></>
             <View style={styles.sectionContainer}>
                 <View style={styles.rightSection}>
                     <View style={styles.ownerContainer}>
@@ -47,7 +32,7 @@ const ItemBottomBar = ({name,owner,stars,reviews,price,specs})=>{
                     <View style={styles.reviewContainer}>
                         <View style={styles.starsContainer}>
                             {
-                                genStars(stars)
+                                genStars(stars,styles.star,styles.star)
                             }
                         </View>
                         <Text style={styles.reviews}>{`${reviews} opinions`}</Text>

@@ -11,6 +11,7 @@ const LocationItem = ({img,name,price,owner,stars,reviews,specs,location}) =>{
     return (
         <View style={styles.container}>
             <ImageBackground
+                key={img}
                 source={img}
                 style={styles.backgroundStyle}
             >
