@@ -1,11 +1,10 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
-import { RFValue } from 'react-native-responsive-fontsize';
-
+import colors from '../../core/themes/colors';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:'#F4F8FC',
+    backgroundColor:colors.backgroundCyan,
     padding:20,
     paddingBottom:0,
   },

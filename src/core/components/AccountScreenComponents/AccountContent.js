@@ -1,36 +1,51 @@
 /* eslint-disable prettier/prettier */
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import {View,Text,ScrollView} from 'react-native';
 import {AccountContentStyle as styles} from './styles';
 import strings from './static/strings';
-import Svg,{Text as SvgText,Circle} from 'react-native-svg';
-import { RFValue } from 'react-native-responsive-fontsize';
-import Animated from 'react-native-reanimated';
+import Svg,{Circle} from 'react-native-svg';
+import colors from '../../themes/colors';
+import FoundationIcon from 'react-native-vector-icons/Foundation';
+import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
+import {LocImg} from '../../resources/index';
+import { CustomLocationList} from '../HomeComponents/LocationListComponents'
 const AccountContent = () => {
 
-    const size = 65;
-    const strokeWidth = 15;
+    const size = 40;
+    const strokeWidth = 11;
     const radius = size - strokeWidth;
     const circumference = 2 * Math.PI * radius;
 
     const mockData = {
         estadistics:{
-            level:30,
+            level:60,
             sales:10,
             client:9,
 
         },
+        locations:[{
+
+            img:LocImg,
+            name:'location1',
+            price:1234,
+            owner:'Cookie Monster',
+            stars:4,
+            reviews:20,
+            specs:[1,2,3],
+            location:'Los Angeles, CA',
+        },
+        {
+            img:LocImg,
+            name:'location2',
+            price:4321,
+            owner:'Cookie Monster',
+            stars:3,
+            reviews:10,
+            specs:[3,2,1],
+            location:'Los Angeles, CA',
+        }],
     };
-    const [level,setLevel] = useState(0);
-    useEffect(()=>{
-        setInterval(() => {
-
-            setLevel(l=>l < 100 ? l + 0.5 : 0);
-
-        }, 10);
-    },[]);
-    //Animated.timing(setLevel(l=>l < 100 ? l + 0.5 : 0))
-    const fillLevel = ( level * circumference) / 100;
+    const fillLevel = ( mockData.estadistics.level * circumference) / 100;
 
     return (
     <View style={styles.container}>
@@ -38,45 +53,80 @@ const AccountContent = () => {
             {strings.findHome}
         </Text>
         <ScrollView
-
+            horizontal
             style={styles.statsList}
          >
-            <View >
+            <View style={styles.statsContainer}>
                 <Text
-                    style={styles.estatistics}>
+                    style={styles.statsHeader}>
                     {strings.estadistics}
                 </Text>
+                <View style={styles.estatisticsMiddleSection}>
+                    <View style={styles.estatisticsLevelContainer}>
+                        <View style={styles.estatisticsLevelTextContainer}>
+                            <Text style={styles.estatisticsLevelText}>
+                                {mockData.estadistics.level}
+                            </Text>
+                            <Text style={styles.estatisticsLevelSubText}>{strings.level}</Text>
+                        </View>
+                        <Svg>
 
-                <Svg style={{width:size * 2,height:size * 2}}>
+                            <Circle
+                                stroke={colors.strokeEmpty}
+                                fill="none"
+                                r={radius}
+                                cx={57}
+                                cy={42}
+                                strokeWidth={strokeWidth}
+                                strokeDasharray={`${circumference}`}
+                            />
+                            <Circle
 
-                    <Circle
-                        stroke="#e3e3e3"
-                        fill="none"
-                        r={radius}
-                        cx={size}
-                        cy={size}
-                        strokeWidth={strokeWidth}
-                        strokeDasharray={`${circumference}`}
-                    />
-                    <Circle
+                                stroke={colors.stroke}
+                                fill="none"
+                                r={radius}
+                                cx={57}
+                                cy={42}
+                                strokeWidth={strokeWidth}
+                                strokeDasharray={`${fillLevel} ${circumference - fillLevel}`}
+                                strokeDashoffset={circumference / 6}
 
-                        stroke="#46D0D9"
-                        fill="none"
-                        r={radius}
-                        cx={size}
-                        cy={size}
-                        strokeWidth={strokeWidth}
-                        strokeDasharray={`${fillLevel} ${circumference - fillLevel}`}
-                        strokeDashoffset={circumference / 6}
+                            />
 
-                    />
+                        </Svg>
 
-                </Svg>
+                    </View>
 
+                    <View style={styles.estatisticsTextContainer}>
 
+                        <View style={styles.estatisticsTextSubContainer}>
+                            <FoundationIcon style={styles.estatisticsSaleIcon} name="dollar"/>
+                            <Text style={styles.estatisticsText}>
+                                {mockData.estadistics.sales} {strings.sales}
+                            </Text>
+                        </View>
 
+                        <View style={styles.estatisticsTextSubContainer}>
+                            <MaterialIcon style={styles.estatisticsClientIcon} name="person-outline" />
+                            <Text style={styles.estatisticsText}>
+                                {mockData.estadistics.client < 10 ? 0 : null}{mockData.estadistics.client} {strings.clients}
+                            </Text>
+                        </View>
+
+                    </View>
+
+                </View>
+                <Text style={styles.estatisticsFooter}>
+                    {strings.moreInfo}
+                </Text>
             </View>
-         </ScrollView>
+            <View style={styles.statsContainer}>
+                <Text style={styles.statsHeader}>{strings.info}</Text>
+                <Text style={styles.infoText}>{strings.infoText}</Text>
+            </View>
+        </ScrollView>
+        <Text style={styles.goldHeader}>{strings.post}</Text>
+        <CustomLocationList data={mockData.locations} style={{}} favEnabled={false}/>
     </View>);
 };
 

@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
+import colors from '../../../core/themes/colors';
 
 export default StyleSheet.create({
 
@@ -8,7 +9,7 @@ export default StyleSheet.create({
         flexDirection:'row',
         overflow:'hidden',
         width:'100%',
-        backgroundColor:'white',
+        backgroundColor:colors.backgroundWhite,
         height:55,
         borderTopRightRadius:20,
         borderTopLeftRadius:20,
@@ -17,11 +18,11 @@ export default StyleSheet.create({
     },
     icon:{
         fontSize:RFValue(30),
-        color:'rgba(0,0,0,0.3)',
+        color: colors.iconGrey,
     },
     iconSelected:{
         fontSize:RFValue(30),
-        color:'#46D0D9',
+        color: colors.iconCyan,
     },
 
 });

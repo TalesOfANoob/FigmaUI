@@ -2,7 +2,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import LocationItem from './LocationItem';
-const renderItem = (data)=>{
+const renderItem = (data,favEnabled)=>{
 
     const jsx = [];
     for (let i = 0; i < data.length; i++){
@@ -17,15 +17,16 @@ const renderItem = (data)=>{
             reviews={item.reviews}
             specs={item.specs}
             location={item.location}
+            favEnabled={favEnabled}
         />);
     }
     return jsx;
 };
-const CustomLocationList = ({data,style})=>{
+const CustomLocationList = ({data,style,favEnabled = true})=>{
 
     return (
         <View style={style}>
-            {renderItem(data)}
+            {renderItem(data,favEnabled)}
         </View>
 
     );

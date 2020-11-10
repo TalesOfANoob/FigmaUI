@@ -5,7 +5,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import roots from './roots';
 import LoginScreen from '../screens/LoginScreen';
 import HomeNavigator from './HomeNavigator';
-import AccountScreen from '../screens/AccountScreen'
+import AccountScreen from '../screens/AccountScreen';
+import LocationDetailScreen from '../screens/LocationDetailScreen';
 const defaultNavigationOptions = () => ({
     gestureEnabled: false,
     headerShown: false,
@@ -33,6 +34,11 @@ const MainStackNavigator = ()=>(
                 screenOptions={defaultNavigationOptions}
                 name={roots.accountScreen}
                 component={AccountScreen}
+            />
+            <Stack.Screen
+                screenOptions={defaultNavigationOptions}
+                name={roots.locationDetailScreen}
+                component={LocationDetailScreen}
             />
 
         </Stack.Navigator>

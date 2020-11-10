@@ -4,7 +4,7 @@ import {View,ScrollView,ImageBackground,Image} from 'react-native';
 import {AuthBottomOptions, AuthForm} from '../core/components/AuthComponents';
 import {AuthScreenStyles as styles} from './styles';
 import {LoginStrings as strings} from './static';
-import {AuthBackground,WelcomeIcon} from '../core/resources'
+import {AuthBackground,WelcomeIcon} from '../core/resources';
 const LoginScreen = ({navigation}) => {
 
   return (

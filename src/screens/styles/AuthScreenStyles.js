@@ -1,6 +1,5 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
-import { RFValue } from 'react-native-responsive-fontsize';
 
 export default StyleSheet.create({
   scroll:{
@@ -22,8 +21,8 @@ export default StyleSheet.create({
   },
   welcomeIcon:{
     marginTop:25,
-    width:'55%',
-    height:RFValue(140),
+    width:185,
+    height:120,
   },
 
 });

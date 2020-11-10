@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
+import colors from '../../../themes/colors';
 export default StyleSheet.create({
     topBar:{
         marginTop:5,
@@ -8,11 +9,11 @@ export default StyleSheet.create({
         alignItems:'center',
         justifyContent:'center',
     },
-    icon: {
-    fontSize:RFValue(19),
-    color:'#143656',
-    marginHorizontal:7,
-},
+    icon:{
+      fontSize:RFValue(19),
+      color:colors.fontBlue,
+      marginHorizontal:7,
+  },
   location:{
     flexDirection:'row',
     flex:5,
@@ -21,7 +22,7 @@ export default StyleSheet.create({
   },
   locationText:{
       textAlign:'center',
-      color:'#143656',
+      color:colors.fontBlue,
       fontSize:RFValue(15),
   },
   profilePic:{
@@ -31,11 +32,11 @@ export default StyleSheet.create({
   },
   hello:{
     marginTop:30,
-    color:'#B3B3B3',
+    color:colors.fontGrey,
     fontSize:RFValue(20),
   },
   look:{
-    color:'#143656',
+    color: colors.fontBlue,
     fontSize:RFValue(20),
   },
 });
