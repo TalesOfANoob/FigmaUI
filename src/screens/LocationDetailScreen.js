@@ -1,43 +1,99 @@
 /* eslint-disable prettier/prettier */
-import React, { useState } from 'react';
-import {ScrollView,View,Image, ImageBackground,Text,TouchableOpacity} from 'react-native';
+import React, { useRef, useState } from 'react';
+import {ScrollView,View,Image,Text,TouchableOpacity,FlatList} from 'react-native';
 import {LocationDetailStyles as styles} from './styles';
-import {LocImg} from '../core/resources';
+import {LocImg,LocImg2,LocImg3,LocImg4} from '../core/resources';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {DetailStrings as strings} from './static';
 import {CookieMonster} from '../core/resources';
-import {Swipeable} from 'react-native-gesture-handler'
+import GestureRecognizer from 'react-native-swipe-gestures';
 const LocationDetailScreen  = ({route,navigation}) =>{
     const {location,name,specs,price} = route.params;
     const [fav,setFav] = useState(false);
     const [selectedCat,setSelected] = useState(0);
+    const [selectedImage,setSelectedImage] = useState(0);
+    const carouselRef = useRef(null);
+    const scrollCarousel = (index) =>{
+        if (carouselRef.current != null){
+            carouselRef.current.scrollToIndex({index});
+        }
+    };
     const availability = Math.random();
     return (
     <View style={styles.container}>
         <ScrollView>
-            <ImageBackground style={styles.locationImage} source={LocImg}>
-                <View style={styles.topButtonContainer}>
-                <TouchableOpacity
-                    style={styles.backIconContainer}
-                    onPress={()=>navigation.goBack()}
+            <GestureRecognizer
+                    onSwipeLeft={()=>{
+                        if (selectedImage < 3){
+                            scrollCarousel(selectedImage + 1);
+                            setSelectedImage(selectedImage + 1);
+                        }
+                    }}
+                    onSwipeRight={()=>{
+                        if (selectedImage > 0){
+                            scrollCarousel(selectedImage - 1 );
+                            setSelectedImage(selectedImage - 1);
+                        }
+                    }}
+                    config={{
+                        velocityThreshold: 0.2,
+                        directionalOffsetThreshold: 60,
+                      }}
             >
-                    <EntypoIcon style={styles.backIcon} name="chevron-small-left"/>
-                </TouchableOpacity>
+                <View style={styles.carouselContainer}>
+                    <FlatList
+                        ref={carouselRef}
+                        style={styles.carousel}
+                        horizontal
+                        scrollEnabled={false}
+                        data={[LocImg,LocImg2,LocImg3,LocImg4]}
+                        keyExtractor={(item,index)=>index.toString()}
+                        renderItem={({item})=>{
 
-                    <Text style={[styles.availability,availability < 0.5 ? styles.unAvailable : styles.available]}>
-                        {availability < 0.5 ? strings.unAvailable : strings.available}
-                    </Text>
+                            return (
 
-                    <TouchableOpacity
-                        style={styles.favIconContainer}
-                        onPress={()=>fav ? setFav(false) : setFav(true)}
-                    >
-                        <MaterialCommunityIcon style={[styles.favIcon,fav ? styles.favIconEnabled : styles.favIconDisabled]} name="heart-outline"/>
-                    </TouchableOpacity>
+                            <Image style={styles.locationImage} source={item}/>
+
+                        );
+
+                        }}
+                        getItemLayout={(data,index)=>{
+                            return {length:450,offset:450 * index,index};
+                        }}
+                    />
+
+                    <View>
+                        <View style={styles.topButtonContainer}>
+                        <TouchableOpacity
+                            style={styles.backIconContainer}
+                            onPress={()=>navigation.goBack()}
+                        >
+                            <EntypoIcon style={styles.backIcon} name="chevron-small-left"/>
+                        </TouchableOpacity>
+
+                            <Text style={[styles.availability,availability < 0.5 ? styles.unAvailable : styles.available]}>
+                                {availability < 0.5 ? strings.unAvailable : strings.available}
+                            </Text>
+
+                            <TouchableOpacity
+                                style={styles.favIconContainer}
+                                onPress={()=>fav ? setFav(false) : setFav(true)}
+                            >
+                                <MaterialCommunityIcon style={[styles.favIcon,fav ? styles.favIconEnabled : styles.favIconDisabled]} name="heart-outline"/>
+                            </TouchableOpacity>
+
+                        </View>
+                        <View style={styles.carouselDotsContainer}>
+                            <EntypoIcon style={[styles.carouselDot,selectedImage === 0 ? styles.carouselDotSelected : null]} name="dot-single"/>
+                            <EntypoIcon style={[styles.carouselDot,selectedImage === 1 ? styles.carouselDotSelected : null]} name="dot-single"/>
+                            <EntypoIcon style={[styles.carouselDot,selectedImage === 2 ? styles.carouselDotSelected : null]} name="dot-single"/>
+                            <EntypoIcon style={[styles.carouselDot,selectedImage === 3 ? styles.carouselDotSelected : null]} name="dot-single"/>
+                        </View>
+                    </View>
                 </View>
-            </ImageBackground>
+            </GestureRecognizer>
             <View style={styles.locationInfo}>
                 <View style={styles.infoHeader}>
 

@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
+import { color } from 'react-native-reanimated';
 import { RFValue } from 'react-native-responsive-fontsize';
 import colors from '../../core/themes/colors';
 export default StyleSheet.create({
@@ -7,9 +8,32 @@ export default StyleSheet.create({
 
         flex:1,
     },
-    locationImage:{
+
+    carouselContainer:{
         width:'100%',
         height:405,
+    },
+    carousel:{
+        position:'absolute',
+    },
+    locationImage:{
+        width:450,
+        height:405,
+
+    },
+    carouselDotsContainer:{
+        flexDirection:'row',
+        justifyContent:'center',
+        marginTop:RFValue(200),
+    },
+    carouselDot:{
+        fontSize:RFValue(20),
+        marginHorizontal:RFValue(-5),
+        fontWeight:'bold',
+        color:colors.backgroundWhite,
+    },
+    carouselDotSelected:{
+        color:colors.iconCyan,
     },
     topButtonContainer:{
 
